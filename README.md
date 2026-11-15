@@ -189,4 +189,4 @@ constraints that each addresses a specific observed failure mode.
 
 ## Task 6: Reflection
 
-[Read the Task 6 reflection PDF](output/pdf/Task6_Reflection_Leo_Liu.pdf).
+[Read the Task 6 reflection PDF](output/pdf/Task6_Reflection_LIU_YIBO.pdf).
