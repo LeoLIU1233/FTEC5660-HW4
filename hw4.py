@@ -11,14 +11,13 @@ from __future__ import annotations
 import argparse
 import csv
 import json
-import math
 import os
 import re
 import threading
 import time
 import traceback
 import unicodedata
-from collections import Counter, defaultdict
+from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import Any
@@ -326,7 +325,7 @@ def parse_query(question: str) -> dict:
         for part in re.split(r"\s+or\s+", comparison.group(1), flags=re.I):
             add_company(part)
 
-    # Possessive templates: "Company X's revenue ..." and "Halcyon Air Cargo's ...".
+    # Possessive templates such as "the issuer's revenue ...".
     for match in re.finditer(
             r"([A-Z][A-Za-z0-9&.-]*(?:\s+[A-Z][A-Za-z0-9&.-]*){0,5})"
             r"['\u2019](?:s)?(?=\s|[,.;:?])",
