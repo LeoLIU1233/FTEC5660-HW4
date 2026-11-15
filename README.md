@@ -186,3 +186,7 @@ metadata filtering removes impossible candidates, normalized BM25 finds the tabl
 per-company retrieval protects comparison evidence. Abstention then removes false-positive contexts.
 The pipeline is therefore not merely a stronger lexical ranker; it is a sequence of independent
 constraints that each addresses a specific observed failure mode.
+
+## Task 6: Reflection
+
+[Read the Task 6 reflection PDF](output/pdf/Task6_Reflection_Leo_Liu.pdf).
