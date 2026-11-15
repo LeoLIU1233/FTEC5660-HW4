@@ -1,0 +1,9 @@
+variant,change,chunks,parse_accuracy,recall_at_5,answerable_kept,unanswerable_rejected,abstention_score,fact_recall,table_recall,comparison_recall
+B0,"Naive RAG baseline: raw BeautifulSoup text, recursive split, lower-cased whitespace BM25, whole-corpus top-5, no parsing, never []",210,,0.413043,1.0,0.0,0.0,0.75,0.318182,0.25
+V1,+ Preserve table rows and column labels with table_to_text(),240,,0.369565,1.0,0.0,0.0,0.833333,0.227273,0.166667
+V2,+ Section/table-aware chunks and contextual chunk headers,3478,,0.195652,1.0,0.0,0.0,0.5,0.136364,0.0
+V3,+ parse_query() and metadata filtering by company/year/doc type,3478,1.0,0.478261,1.0,0.0,0.0,0.916667,0.5,0.0
+V4,+ normalized tokenization and synonym expansion,3478,1.0,0.891304,1.0,0.0,0.0,1.0,1.0,0.583333
+V5,+ concept-phrase and named-year score boosts,3478,1.0,0.934783,1.0,0.0,0.0,1.0,1.0,0.75
+V6,+ per-company result quota for comparison questions,3478,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0
+V7,"+ abstention guards (unknown company/year or missing metric), matching submitted retrieve()",3478,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
